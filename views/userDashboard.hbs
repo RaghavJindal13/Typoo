@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="header">
+        <img class="logo" src="/Images/logo.svg" alt="logo">
+        <h1 class="logo_name">Typoo</h1>
+
+
+        <img class="profile_pic" src="/Images/cat2.png" alt="profile_pic">
+       
+        <p class="username"></p>
+
+    </nav>
+
+
+    
+    <!-- this is the container containing the profile sectioiin and the blogs published section -->
+
+    <div class="container">
+        <div class="profile">
+            <img src="/Images/Capture.PNG" alt="profile_pic" class="pro_pic">
+            <div class="profile_info">
+                <h1>{{user_cred.first_name}}</h1>
+                <p>{{user_details.bio}}</p><br>
+                <a href="/edit_details/{{user_details._id}}"><button class="edit_btn">Edit profile</button></a>
+                
+                <p>blog posted : 10</p>
+                <p>Total views: 100</p>
+            </div>
+         <div class="sidebar_links">
+
+                
+                    <div class="list">
+                     <img src="/Images/university.svg" alt="" class="list_img">
+                     <p>{{user_details.univ_name}}</p> 
+                    </div>
+                    <div class="list">
+                     <img src="/Images/location.svg" alt="" class="list_img">
+                     <p>{{user_details.address}}</p> 
+                    </div>
+                    <div class="list">
+                     <img src="/Images/email.svg" alt="" class="list_img">
+                     <p>{{user_details.email_id}}</p> 
+                    </div>
+                    <div class="list">
+                     <img src="/Images/twitter.svg" alt="" class="list_img">
+                     <p>{{user_details.account}}</p> 
+                    </div>
+         </div>
+        </div>
+        
+        <div class="blog_section">
+             <a href="/blog_write"><button class="signup">Write blog</button></a>
+
+            {{#each user_blog}}
+            <div class="blogs">
+               
+                <a href="/blog_page/{{this._id}}"><h4 class="topic">{{this.title}}</h4></a>
+                
+               
+                <p>{{this.content}}</p>
+
+                <td>
+                <a href="/blog_write/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"> edit</i></a>
+                
+                <a href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true">DELETE</i></a>
+            </td>
+
+            </div>
+           
+             {{/each}}
+            {{!-- <div class="blogs">
+               
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div>
+            <div class="blogs">
+                <h4 class="topic">Big ass Topic nigga</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, delectus. Optio qui, aut quasi similique alias eius totam veniam minima deserunt! Veniam officia et error dolor, rerum tempore quaerat fugit.</p>
+            </div> --}}
+        </div>
+    </div>
+    
+</body>
+
+</html>

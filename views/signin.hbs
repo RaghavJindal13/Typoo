@@ -1,0 +1,78 @@
+{{!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/signin" method="POST">
+<input type="hidden" name="_id" value="{{employee._id}}">
+  <label for="username">username:</label><br>
+  <input type="text" id="lname" name="username" value="Doe" required><br>
+  <label for="password">password:</label><br>
+  <input type="text" id="lname" name="password" value="Doe" required><br>
+  
+  <a href="/"><input type="submit" value="Submit"></a>
+
+
+</form> 
+
+
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="nav">
+    <img class="logo" src="/Images/logo.svg" alt="logo">
+    <h1 class="logo_name">Typoo</h1>
+
+
+    <div class="LogSin">
+        
+        <a href="/signin"><button class="signin">Sign in</button></a>
+        <a href="/signup"><button class="signup">Sign up</button></a>
+  </div>
+  </div>
+
+<div class="SignUpForm">
+
+<h2>Sign in</h2>
+<div  class="Form">
+
+  <form action="/signin" method="POST">
+   
+   
+    
+    <input type="text" id="username" name="username" placeholder="Username" autocomplete="off" required>
+    <!-- <label for="password">password:</label><br> -->
+    <input type="password" id="password" name="password" placeholder="Password" autocomplete="off" required>
+    <!-- <label for="cnf_pass">cnf_pass:</label><br> -->
+    
+    <a href="/"><input type="submit" value="Submit" id="submit"></a>
+  </form> 
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>
+

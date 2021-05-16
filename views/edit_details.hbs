@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div  class="Form">
+
+  <form action="/edit_details" method="POST">
+    <input type="hidden"id="_id" name="_id" value="{{doc._id}}" placeholder={{doc._id}}>
+   
+    <input type="text" id="username" name="username" placeholder="User Name"  value="{{doc.username}}" autocomplete="off">
+    <!-- <label for="last_name">Last name:</label><br> -->
+    <input type="text" id="univ_name" name="univ_name" placeholder="univ_name"  value="{{doc.univ_name}}" autocomplete="off">
+    <!-- <label for="email_id">email_id:</label><br> -->
+    <input type="text" id="address" name="address" placeholder="address" value="{{doc.address}}" autocomplete="off">
+    <!-- <label for="username">username:</label><br> -->
+    <input type="text" id="email_id" name="email_id" placeholder="email_id" value="{{doc.email_id}}" autocomplete="off">
+    <!-- <label for="password">password:</label><br> -->
+     <input type="text" id="account" name="account" placeholder="account" value="{{doc.account}}" autocomplete="off">
+     <input type="text" id="bio" name="bio" placeholder="bio" value="{{doc.bio}}" autocomplete="off">
+    
+    <input type="submit" value="add details" id="submit">
+  </form> 
+</div>
+</body>
+</html>
