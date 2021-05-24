@@ -17,7 +17,7 @@ MongoDB, Expressjs, Nodejs, express-handlebars <br>
       <img src="https://circleci.com/gh/amazingandyyy/mern.svg?style=svg" />
    </a>
 </p>
-
+> Docker pull command - docker pull raghav131/node-docker
 > MERN is a fullstack implementation in MongoDB, Expressjs, React/Redux, Nodejs
 
 MERN stack is the idea of using Javascript/Node for fullstack web development.
